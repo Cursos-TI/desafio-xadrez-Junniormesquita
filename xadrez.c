@@ -27,9 +27,11 @@
     // Sugestão: Implemente a movimentação do Cavalo utilizando loops com variáveis múltiplas e condições avançadas.
     // Inclua o uso de continue e break dentro dos loops.
 
-    int main() {
+#include <stdio.h>
+
+int main() {
     // -------------------------------
-    // Movimento da Torre (5 casas para a direita)
+    // Movimento da Torre (5 casas para a Direita)
     // Utiliza o laço FOR
     // -------------------------------
     printf("Movimento da Torre (5 casas para a Direita):\n");
@@ -39,7 +41,7 @@
     printf("\n");
 
     // -------------------------------
-    // Movimento do Bispo (5 casas na diagonal Cima e Direita)
+    // Movimento do Bispo (5 casas na diagonal Cima Direita)
     // Utiliza o laço WHILE
     // -------------------------------
     printf("Movimento do Bispo (5 casas na diagonal Cima Direita):\n");
@@ -60,6 +62,26 @@
         printf("Esquerda\n");
         contador_rainha++;
     } while (contador_rainha <= 8);
+    printf("\n");
+
+    // -------------------------------
+    // Movimento do Cavalo (2 casas para Baixo e 1 para Esquerda)
+    // Utiliza loops aninhados: FOR + WHILE
+    // -------------------------------
+    printf("Movimento do Cavalo (2 casas para Baixo e 1 para Esquerda):\n");
+
+    // Loop externo: movimento de 2 casas para Baixo (obrigatoriamente FOR)
+    for (int i = 1; i <= 2; i++) {
+        printf("Baixo\n");
+    }
+
+    // Loop interno: movimento de 1 casa para Esquerda (WHILE)
+    int contador_cavalo = 1;
+    while (contador_cavalo <= 1) {
+        printf("Esquerda\n");
+        contador_cavalo++;
+    }
+
     printf("\n");
 
     return 0;
